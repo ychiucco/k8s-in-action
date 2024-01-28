@@ -211,3 +211,15 @@ $ kubectl delete po -l creation_method=manual # with label selection
 pod "kubia-manual" deleted
 pod "kubia-manual-v2" deleted
 ```
+
+By deleting a namespace, we delete all pods in it
+```sh
+$ kubectl delete ns custom-namespace
+namespace "custom-namespace" deleted
+```
+
+```sh
+$ kubectl delete po --all
+
+$ kubectl delete all --all  # this delete all types of resources
+```
